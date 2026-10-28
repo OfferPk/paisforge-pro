@@ -1,0 +1,87 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 900 500" width="100%" height="100%">
+  <defs>
+    <linearGradient id="bg" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#0b0f19" />
+      <stop offset="100%" stop-color="#111827" />
+    </linearGradient>
+    <linearGradient id="boxGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#1e293b" />
+      <stop offset="100%" stop-color="#0f172a" />
+    </linearGradient>
+  </defs>
+
+  <rect width="900" height="500" rx="16" fill="url(#bg)" stroke="#1f2937" stroke-width="2" />
+
+  <text x="40" y="45" font-family="sans-serif" font-size="20" font-weight="bold" fill="#ffffff">PAISForge Pro Architecture</text>
+  <text x="40" y="70" font-family="sans-serif" font-size="12" fill="#38bdf8">CCSDS 651.1-B-1 &amp; ISO 20104 Producer-Archive Interface Specification Pipeline</text>
+
+  <!-- Layer 1 -->
+  <g transform="translate(40, 110)">
+    <rect width="240" height="340" rx="10" fill="url(#boxGrad)" stroke="#334155" stroke-width="1.5" />
+    <text x="20" y="32" font-family="sans-serif" font-size="14" font-weight="bold" fill="#94a3b8">1. PRODUCER (SOC)</text>
+    
+    <rect x="15" y="55" width="210" height="50" rx="6" fill="#1e293b" stroke="#38bdf8" stroke-width="1" />
+    <text x="25" y="80" font-family="sans-serif" font-size="12" font-weight="bold" fill="#ffffff">Instrument Science Data</text>
+    <text x="25" y="95" font-family="sans-serif" font-size="10" fill="#94a3b8">FITS Rasters, PDS4 XML Labels</text>
+
+    <rect x="15" y="120" width="210" height="50" rx="6" fill="#1e293b" stroke="#38bdf8" stroke-width="1" />
+    <text x="25" y="145" font-family="sans-serif" font-size="12" font-weight="bold" fill="#ffffff">PAIMAS SLA Negotiation</text>
+    <text x="25" y="160" font-family="sans-serif" font-size="10" fill="#94a3b8">ISO 20652 Formal Definition</text>
+
+    <rect x="15" y="185" width="210" height="50" rx="6" fill="#1e293b" stroke="#38bdf8" stroke-width="1" />
+    <text x="25" y="210" font-family="sans-serif" font-size="12" font-weight="bold" fill="#ffffff">XFDU SIP Packager</text>
+    <text x="25" y="225" font-family="sans-serif" font-size="10" fill="#94a3b8">CCSDS 661.0-B-1 Container</text>
+
+    <rect x="15" y="250" width="210" height="50" rx="6" fill="#1e293b" stroke="#38bdf8" stroke-width="1" />
+    <text x="25" y="275" font-family="sans-serif" font-size="12" font-weight="bold" fill="#ffffff">SHA-256 Digest Signer</text>
+    <text x="25" y="290" font-family="sans-serif" font-size="10" fill="#94a3b8">Bit-Level Fixity Generation</text>
+  </g>
+
+  <path d="M 280 280 L 330 280" stroke="#38bdf8" stroke-width="2" />
+
+  <!-- Layer 2 -->
+  <g transform="translate(330, 110)">
+    <rect width="240" height="340" rx="10" fill="url(#boxGrad)" stroke="#334155" stroke-width="1.5" />
+    <text x="20" y="32" font-family="sans-serif" font-size="14" font-weight="bold" fill="#38bdf8">2. PAIS ENGINE</text>
+    
+    <rect x="15" y="55" width="210" height="50" rx="6" fill="#1e293b" stroke="#34d399" stroke-width="1" />
+    <text x="25" y="80" font-family="sans-serif" font-size="12" font-weight="bold" fill="#ffffff">Descriptor Compiler</text>
+    <text x="25" y="95" font-family="sans-serif" font-size="10" fill="#94a3b8">transferObjectTypeDescriptor</text>
+
+    <rect x="15" y="120" width="210" height="50" rx="6" fill="#1e293b" stroke="#34d399" stroke-width="1" />
+    <text x="25" y="145" font-family="sans-serif" font-size="12" font-weight="bold" fill="#ffffff">Cardinality Enforcer</text>
+    <text x="25" y="160" font-family="sans-serif" font-size="10" fill="#94a3b8">minOccurs &amp; maxOccurs Bounds</text>
+
+    <rect x="15" y="185" width="210" height="50" rx="6" fill="#1e293b" stroke="#34d399" stroke-width="1" />
+    <text x="25" y="210" font-family="sans-serif" font-size="12" font-weight="bold" fill="#ffffff">MIME &amp; Size Gatekeeper</text>
+    <text x="25" y="225" font-family="sans-serif" font-size="10" fill="#94a3b8">Byte Envelope Verification</text>
+
+    <rect x="15" y="250" width="210" height="50" rx="6" fill="#1e293b" stroke="#34d399" stroke-width="1" />
+    <text x="25" y="275" font-family="sans-serif" font-size="12" font-weight="bold" fill="#ffffff">Anomaly Quarantine</text>
+    <text x="25" y="290" font-family="sans-serif" font-size="10" fill="#94a3b8">Automated SIP Rejection</text>
+  </g>
+
+  <path d="M 570 280 L 620 280" stroke="#34d399" stroke-width="2" />
+
+  <!-- Layer 3 -->
+  <g transform="translate(620, 110)">
+    <rect width="240" height="340" rx="10" fill="url(#boxGrad)" stroke="#334155" stroke-width="1.5" />
+    <text x="20" y="32" font-family="sans-serif" font-size="14" font-weight="bold" fill="#34d399">3. ARCHIVE (OAIS)</text>
+
+    <rect x="15" y="55" width="210" height="50" rx="6" fill="#1e293b" stroke="#a855f7" stroke-width="1" />
+    <text x="25" y="80" font-family="sans-serif" font-size="12" font-weight="bold" fill="#ffffff">OAIS Ingest Acceptance</text>
+    <text x="25" y="95" font-family="sans-serif" font-size="10" fill="#94a3b8">SIP to AIP Archival Storage</text>
+
+    <rect x="15" y="120" width="210" height="50" rx="6" fill="#1e293b" stroke="#a855f7" stroke-width="1" />
+    <text x="25" y="145" font-family="sans-serif" font-size="12" font-weight="bold" fill="#ffffff">Glass Cockpit Studio</text>
+    <text x="25" y="160" font-family="sans-serif" font-size="10" fill="#94a3b8">Interactive Ingest Dashboard</text>
+
+    <rect x="15" y="185" width="210" height="50" rx="6" fill="#1e293b" stroke="#a855f7" stroke-width="1" />
+    <text x="25" y="210" font-family="sans-serif" font-size="12" font-weight="bold" fill="#ffffff">Python 3 CLI Validator</text>
+    <text x="25" y="225" font-family="sans-serif" font-size="10" fill="#94a3b8">Headless CI/CD Ingest Checks</text>
+
+    <rect x="15" y="250" width="210" height="50" rx="6" fill="#1e293b" stroke="#a855f7" stroke-width="1" />
+    <text x="25" y="275" font-family="sans-serif" font-size="12" font-weight="bold" fill="#ffffff">10-Point Normative Auditor</text>
+    <text x="25" y="290" font-family="sans-serif" font-size="10" fill="#94a3b8">100% Certified Verification</text>
+  </g>
+</svg>
